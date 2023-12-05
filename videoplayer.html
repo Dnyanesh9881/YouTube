@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=DM+Sans:opsz@9..40&family=Inter&family=Inter+Tight&family=Mulish&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <link rel="stylesheet" href="videoplayer.css" />
+  </head>
+  <body>
+    <nav id="my-navbar">
+        <div class="nav-left-menu">
+            <div class="side-btn"><span class="material-symbols-outlined">
+                menu
+                </span></div>
+            <img class="logo" src="./assets/Youtube-Logo.svg">
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search" id="search-input">
+            <button class="search-btn"><span class="material-symbols-outlined">
+                search
+                </span></button>
+        </div>
+        <div class="nav-right-menu-all">
+            <div class="nav-right-menu"><img src="./assets/Group (1).svg"></div>
+            <div class="nav-right-menu"><img src="./assets/Group (2).svg"></div>
+            <div class="nav-right-menu"><img src="./assets/Group (3).svg"></div>
+            <div class="nav-right-menu"><img src="./assets/Profile-pic.svg"></div>
+        </div>
+    </nav>
+    <div class="video_player_container">
+      <div id="video_player_area">
+        <div id="video_player"></div>
+        <div class="title"></div>
+        <div class="data_stat">
+            <div class="views_date">
+                <p class="views"></p>
+                <p class="date"></p>
+            </div>
+            <div class="all-btn">
+                <div class="like_dislike">
+                    <button class="like"></button>
+                    <button class="dislike"></button>
+                </div>
+                <button class="share"></button>
+                <button class="save"></button>
+                <button class="other"></button>
+            </div>
+        </div>
+        <div class="channel-info">
+          <img src="" class="channel-icon" alt="" />
+          <div class="">
+            <div class="channel-name-follower">
+                <p class="channel-name"></p>
+                <p class="followers"></p>
+              </div>
+              <button class="subscribe-btn">SUBSCRIBES</button>
+          </div>
+        </div>
+      </div>
+      <div class="suggested_videos"></div>
+    </div>
+
+    <!-- cdn link -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="videoplayer.js"></script>
+  </body>
+</html>

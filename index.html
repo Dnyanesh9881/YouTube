@@ -13,7 +13,13 @@
 </head>
 <body>
     <nav id="my-navbar">
-        <img class="logo" src="./assets/Youtube-Logo.svg">
+        <div class="nav-left-menu">
+            <div class="side-btn"><span class="material-symbols-outlined">
+                menu
+                </span></div>
+            <img class="logo" src="./assets/Youtube-Logo.svg">
+        </div>
+        
         <div class="search-bar">
             <input type="text" placeholder="Search" id="search-input">
             <button class="search-btn"><span class="material-symbols-outlined">
@@ -29,7 +35,7 @@
     </nav>
 
     <div id="container">
-        <div id="left-container">
+        <div  class="left-container">
             <div class="side-bar-top-menu">
                 <div class="side-bar-menu home"><img class="side-bar-img" src="./assets/home-fill.svg"> Home</div>
                 <div class="side-bar-menu explore"><img class="side-bar-img" src="./assets/iconmn.svg"> Explore</div>
@@ -55,9 +61,33 @@
                 <div class="side-bar-menu subscription"><img class="side-bar-img" src="./assets/liked videos.svg"> Show More</div>
             </div>
         </div>
-    <div id="right-container">
+    <div class="right-container">
         <div id="top-menu-all">
             <div class="all top-menu">All</div>
+        </div>
+        <div class="video-container">
+           <!-- <div class="video">
+            <img src="https://images.unsplash.com/photo-1699354510794-1b2dd019b31d?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8fA%3D%3D" class="thumbnail" alt="">
+            <div class="content">
+                <img src="./assets/User-Avatar.svg" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title"></h4>
+                    <p class="channel-name">User-Avatar</p>
+                </div>
+            </div> -->
+           </div>
+           <div class="search_video_container hide">
+            <!-- <div class="search_video">
+                <img src="https://images.unsplash.com/photo-1699354510794-1b2dd019b31d?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8fA%3D%3D" class="search_thumbnail" alt="">
+                <div class="search_content">
+                    <h4 class="search_title">hbdfhvbdfhvbdsfvdsfvjndsfjvsjdf dfvjnfv sddkvnsdkvdvvndkv fnvjsfnjf  sdjdnvjsf  sns s fnsf sfmfnsf smdnsdf</h4>
+                    
+                    <div class="search_info">
+                        <img src="./assets/User-Avatar.svg" class="search_channel_icon" alt="">
+                        <p class="search_channel_name">User-Avatar</p>
+                    </div>
+                </div>
+           </div> -->
         </div>
     </div>
     </div>
