@@ -1,57 +1,188 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 #my-navbar {
-    /* min-height: 50px; */
-    /* padding: 0.1rem; */
-    background: #212121;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 1rem;
-  }
-  .search-bar {
-    background-color: #4b4949;
-    display: flex;
-    align-items: center;
-  }
-  #search-input {
-    height: 30px;
-    background-color: #121212;
-    border: none;
-    padding: 0.2rem;
-    width: 25vw;
-    color: white;
-  }
-  #search-input:focus{
-      outline: none;
-  }
-  .search-btn {
-    background-color: #4b4949;
-    color: white;
-    border: none;
-    padding-inline:0.4rem;
-  }
-  .nav-right-menu-all {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 16vw;
-  }
-  .nav-right-menu {
-    /* height: 31px; */
-    width: 31px;
-    text-align: center;
-    padding: 0.4rem;
-  }
-  .nav-left-menu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .side-btn{
-    margin-right: 1rem;
-    cursor: pointer;
-    color: aliceblue;
-  }
+  /* min-height: 50px; */
+  /* padding: 0.1rem; */
+  background: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+}
+.search-bar {
+  background-color: #4b4949;
+  display: flex;
+  align-items: center;
+}
+#search-input {
+  height: 30px;
+  background-color: #121212;
+  border: none;
+  padding: 0.2rem;
+  width: 25vw;
+  color: white;
+}
+#search-input:focus {
+  outline: none;
+}
+.search-btn {
+  background-color: #4b4949;
+  color: white;
+  border: none;
+  padding-inline: 0.4rem;
+}
+.nav-right-menu-all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 16vw;
+}
+.nav-right-menu {
+  /* height: 31px; */
+  width: 31px;
+  text-align: center;
+  padding: 0.4rem;
+}
+.nav-left-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.side-btn {
+  margin-right: 1rem;
+  cursor: pointer;
+  color: aliceblue;
+}
+.video_player_container {
+  display: flex;
+  background-color: #121212;
+}
+#video_player_area {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  width: 55%;
+  color: white;
+}
+#video_player {
+  border-radius: 1rem;
+  width: 100%;
+}
+.title {
+  font-size: 22px;
+  margin-top: 1rem;
+}
+.data_stat {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  border-bottom: 1px solid #6c6969;
+  padding-bottom: 1rem;
+  align-items: center;
+}
+.views_date {
+  display: flex;
+  color: #aaaaaa;
+}
+.views {
+  margin-right: 1rem;
+}
+
+.all-btn {
+  display: flex;
+  gap: 1.5rem;
+}
+.like,
+.dislike,
+.share,
+.save,
+.other {
+  background-color: transparent;
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+  text-align: center !important;
+  border: none;
+  padding: 0.4rem;
+}
+.dislike {
+  margin-left: 0.6rem;
+}
+
+.other {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+}
+.channel-name-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.description {
+  margin-left: 1rem;
+}
+.channel-info {
+  display: flex;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #6c6969;
+  margin-top: 1rem;
+}
+.channel-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.channel-name-follower {
+  margin-left: 1rem;
+}
+.channel-name {
+  font-size: 17px;
+}
+.followers {
+  color: #aaaaaa;
+  font-size: 15px;
+}
+.subscribe-btn {
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  font-weight: 700;
+  border: none;
+}
+
+.comment {
+  display: flex;
+  align-items: start;
+  margin-top: 1rem;
+}
+.person_pic {
+  margin-right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.person_name {
+  font-weight: 700;
+}
+.persons_comment {
+  margin-top: 0.6rem;
+}
+.comment_buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+.comment_like,
+.comment_dislike,
+.comment_reply {
+  background-color: transparent;
+  color: #aaaaaa;
+  border: none;
+}
