@@ -1,9 +1,21 @@
 function onPlayerReady(event) {
     event.target.playVideo();
   }
-  let videoId = "B-PqVHk9SWM";
-  const API_KEY="AIzaSyCb4vk6UmGDrE-EPcK31Rczlh5uGYEGMh4";
-  // const API_KEY = "AIzaSyADArfs20ud1ndYyu8amgO4JTpiRWPg1qk";
+  
+  const videoId = localStorage.getItem('video_id');
+const channelId=localStorage.getItem('channel_id')
+  // Check if the value is not null or undefined before using it
+  if (videoId) {
+      // Use the value as needed
+      // console.log('Video ID:', videoId);
+
+      // Clear the data from local storage if needed (optional)
+      // localStorage.removeItem('video_id');
+  } else {
+      console.error('Video ID is missing in local storage.');
+  }
+  // const API_KEY="AIzaSyCb4vk6UmGDrE-EPcK31Rczlh5uGYEGMh4";
+  const API_KEY = "AIzaSyADArfs20ud1ndYyu8amgO4JTpiRWPg1qk";
   const BASE_URL = "https://www.googleapis.com/youtube/v3";
   window.addEventListener("load", () => {
     // now here i need to render my video logic
@@ -20,7 +32,7 @@ function onPlayerReady(event) {
     }
 getComments(videoId);
 fetchVideoStats(videoId);
- fetchChannelLogo("UC5H9MzrMkJ5iuN11vV2PLhA",fetchChannelSubsscribers("UC5H9MzrMkJ5iuN11vV2PLhA"));
+ fetchChannelLogo(channelId,fetchChannelSubsscribers(channelId));
 
 
   });
@@ -55,11 +67,8 @@ async function fetchChannelSubsscribers(channelId) {
         `&key=${API_KEY}`
     );
     const data = await response.json();
-    // console.log(data.items[0])
+    
     return data.items[0];
-//     data.items.forEach(ele=>{
-// channelInfoAdd(ele);
-//     })
   } catch (err) {
     console.log(err);
   }
@@ -80,7 +89,7 @@ async function fetchVideoStats(videoId) {
     })
    
    
-    console.log(data);
+    // console.log(data);
   }
   
   async function getComments(videoId) {
@@ -92,11 +101,11 @@ async function fetchVideoStats(videoId) {
         `&maxResults=25&part=snippet`
     );
     const data = await response.json();
-    
+    // console.log(data);
     data.items.forEach(ele=>{ 
       addComment(ele);
     });
-  //  console.log(data);
+   
   }
   const commentContainer=document.querySelector('.comment_container');
   const addComment=(commentData)=>{
@@ -158,3 +167,5 @@ channel.innerHTML=`
             <p class="description">${data.snippet.description}</p>
           </div>`
   }
+
+  localStorage.clear();

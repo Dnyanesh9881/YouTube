@@ -58,13 +58,14 @@
 .video_player_container {
   display: flex;
   background-color: #121212;
+  /* gap: 1rem; */
 }
 #video_player_area {
   display: flex;
+  flex: 6;
   flex-direction: column;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  width: 55%;
+ padding: 1rem;
+  width: 60%;
   color: white;
 }
 #video_player {
@@ -186,3 +187,40 @@
   color: #aaaaaa;
   border: none;
 }
+.suggested_videos{
+  flex: 4;
+ padding: 1rem;
+ color: white;
+}
+.search_video{
+  display: flex;
+  margin-bottom: 1rem;
+  }
+  .search_thumbnail{
+    min-width: 200px;
+
+    height:150px;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  .search_content{
+  margin-left: 1rem;
+  }
+  .search_channel_icon{
+    width: 40px ;
+    height: 40px ;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  .search_info{
+  display: flex;
+  }
+  .search_title{
+  font-size: 18px;
+  font-weight: 400;
+  }
+  .search_channel_name{
+  padding-left: 1rem;
+  font-size: 14px;
+  }
