@@ -47,6 +47,7 @@ async function fetchVideos(searchQuery, maxResults) {
   const data = await response.json();
   // console.log(data);
   if (searchQuery !== "") {
+    searchVideoContainer.innerHTML="";
     data.items.forEach((element) => {
       searchResults(element);
     });
@@ -83,6 +84,7 @@ home.addEventListener("click", () => {
 });
 
 const searchResults = (data) => {
+ 
   searchVideoContainer.innerHTML += `
     <div class="search_video" onclick="onClickPlay('${data.id.videoId}', '${data.snippet.channelId}')">
     <img src="${data.snippet.thumbnails.high.url}" class="search_thumbnail" alt="">
