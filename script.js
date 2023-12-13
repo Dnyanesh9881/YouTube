@@ -39,11 +39,12 @@ async function fetchVideos(searchQuery, maxResults) {
       "/search" +
       `?key=${API_KEY}` +
       "&part=snippet" +
+"&chart=mostPopular"+
       `&q=${searchQuery}` +
       `&maxResults=${maxResults}`
   );
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
   if (searchQuery !== "") {
     searchVideoContainer.innerHTML="";
     data.items.forEach((element) => {

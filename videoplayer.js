@@ -11,7 +11,8 @@ const videoTitle=document.querySelector('.title');
 videoTitle.innerText=title;
   // Check if the value is not null or undefined before using it
   if (videoId) {
-     
+    //  console.log(videoId);
+    //  console.log(channelId);
   } else {
       console.error('Video ID is missing in local storage.');
   }
@@ -84,7 +85,7 @@ async function fetchVideoStats(videoId) {
         `&id=${videoId}`
     );
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     data.items.forEach(ele=>{
       videoStatistics(ele);
     })
