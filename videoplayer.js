@@ -3,23 +3,23 @@ function onPlayerReady(event) {
   }
   
   const videoId = localStorage.getItem('video_id');
-const channelId=localStorage.getItem('channel_id')
+const channelId=localStorage.getItem('channel_id');
+const title=localStorage.getItem('title');
+
+const videoTitle=document.querySelector('.title');
+
+videoTitle.innerText=title;
   // Check if the value is not null or undefined before using it
   if (videoId) {
-      // Use the value as needed
-      // console.log('Video ID:', videoId);
-
-      // Clear the data from local storage if needed (optional)
-      // localStorage.removeItem('video_id');
+     
   } else {
       console.error('Video ID is missing in local storage.');
   }
-  // const API_KEY="AIzaSyCb4vk6UmGDrE-EPcK31Rczlh5uGYEGMh4";
-  const API_KEY = "AIzaSyADArfs20ud1ndYyu8amgO4JTpiRWPg1qk";
+  const API_KEY="AIzaSyCb4vk6UmGDrE-EPcK31Rczlh5uGYEGMh4";
+  // const API_KEY = "AIzaSyADArfs20ud1ndYyu8amgO4JTpiRWPg1qk";
   const BASE_URL = "https://www.googleapis.com/youtube/v3";
   window.addEventListener("load", () => {
     // now here i need to render my video logic
-    // let videoId = "zHcCd59q4AI";
     if (YT) {
       new YT.Player("video_player", {
         height: "500",
@@ -84,6 +84,7 @@ async function fetchVideoStats(videoId) {
         `&id=${videoId}`
     );
     const data = await response.json();
+    console.log(data);
     data.items.forEach(ele=>{
       videoStatistics(ele);
     })
